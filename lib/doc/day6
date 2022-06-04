@@ -1,0 +1,5 @@
+Stateless & statefull widget
+Every component is itself stateful widget like textView it extends statefull widget
+stateless - no any changes on screen
+statefull - changes on screen (change welcome to username)
+

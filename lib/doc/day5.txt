@@ -1,0 +1,8 @@
+
+    |--- Concepts ---|
+How to push branches in github
+SingleChildScrollView - Fix overflow of image in other devices
+Navigator - Enter user name and password and move to home page
+Validation - Only valid user should go to dashboard
+Debug banner - Remove "debug" from top app bar
+
