@@ -1,5 +1,16 @@
 Stateless & statefull widget
 Every component is itself stateful widget like textView it extends statefull widget
 stateless - no any changes on screen
-statefull - changes on screen (change welcome to username)
+statefull/onChange/setState - changes on screen (change welcome to "Welcome whtUserTypes")
 
+Animation - Login btn collapse and change rectangle to circle  
+Container - Create custom button
+Backgroun color - 
+Box decoration - if using this then must define bg color here not in container
+GestureDetector - don't have ripple effect and other properties, no feedback
+Inkwell - have ripple effect .. " onPress, onTap
+
+Change text to icon - [Similar to order confirmed]
+await async - Goto dashboard after login after 1 second
+
+push branch by GUI by cloud btn right to current branch name
