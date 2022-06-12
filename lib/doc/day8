@@ -1,0 +1,9 @@
+
+Splash screen(Ripple effect)
+ink vs animatedContainer - Fixing bug of splash screen working but not showing on top
+1. Use ink
+2. Material - Should not have any decoration in child, give ancestor material
+
+Add appBar - replace return to "scafold" from material
+Textfield vs TextFormField - TextFormField is easy for form validation
+Validation - length not be less than 6, not empty
