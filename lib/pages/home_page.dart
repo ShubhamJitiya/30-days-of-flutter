@@ -9,15 +9,18 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dummyList = List.generate(50, (index) => CatalogModel.items[0]);
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Catalog App"),
       ),
       body: ListView.builder(
-        itemCount: CatalogModel.items.length,
+        padding: const EdgeInsets.all(16.0),
+        itemCount: dummyList.length,
         itemBuilder: (context, index) { 
           return ItemWidget(
-            item: CatalogModel.items[index],
+            item: dummyList[index],
           );
         },
       ),

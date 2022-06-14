@@ -10,12 +10,10 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(8),
       child: ListTile(
         onTap: () {
           print("${item.name} pressed");
         },
-        contentPadding: EdgeInsets.all(13),
         leading: Image.network(item.image),
         title: Text(item.name),
         subtitle: Text(item.desc),
