@@ -8,4 +8,5 @@ Local files | Load and Decode from json
 6. JsonEncode - Convert json to String
 7. JsonDecode - Convert String to Map(key, value)
 8. user class data class generator - ctrl+p search for class generator and select class
+9. ProgressIndicator - handle null
 
