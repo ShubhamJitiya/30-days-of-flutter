@@ -1,0 +1,11 @@
+Local files | Load and Decode from json
+
+1. json - [array] , {object}
+2. stateless - statefull - convert it to stateful beacause we wait out list to be update(select and click on bulb)
+3. init life cycle method
+4. Add json - declaration of assets/file in pubspec.yaml
+5. Debugging - Programs stops at breakpoint and then we can manipulate it and test it
+6. JsonEncode - Convert json to String
+7. JsonDecode - Convert String to Map(key, value)
+8. user class data class generator - ctrl+p search for class generator and select class
+
