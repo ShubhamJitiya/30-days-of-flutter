@@ -13,23 +13,27 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
         child: ButtonBar(
-           alignment: MainAxisAlignment.spaceBetween,
-                buttonPadding: EdgeInsets.zero,
-                children: [
-                  "\$${catalog.price}".text.bold.xl4.red800.make(),
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(MyTheme.darkBluishColor),
-                          shape: MaterialStateProperty.all(StadiumBorder())),
-                      child: "Buy".text.make()).wh(100, 50)
-                ],
+          alignment: MainAxisAlignment.spaceBetween,
+          buttonPadding: EdgeInsets.zero,
+          children: [
+            "\$${catalog.price}".text.bold.xl4.red800.make(),
+            ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(MyTheme.darkBluishColor),
+                        shape: MaterialStateProperty.all(StadiumBorder())),
+                    child: "Buy".text.make())
+                .wh(100, 50)
+          ],
         ).p32(),
       ),
       body: SafeArea(
@@ -53,9 +57,11 @@ class HomeDetailPage extends StatelessWidget {
                             .color(MyTheme.darkBluishColor)
                             .make(),
                         catalog.desc.text
-                            .textStyle(context.captionStyle).xl
+                            .textStyle(context.captionStyle)
+                            .xl
                             .make(),
                         10.heightBox,
+                        "Dolore sint est aliqua velit nulla amet proident ut duis veniam sunt. Nisi aliquip consequat et officia dolor. Excepteur anim anim ut anim mollit. Ea id est cupidatat officia elit velit labore ipsum esse fugiat aliqua culpa.".text.textStyle(context.captionStyle).make().p16()
                       ],
                     ).py64(),
                   )))
