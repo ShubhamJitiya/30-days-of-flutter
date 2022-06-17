@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: context.theme.buttonColor,
           child: Icon(
             CupertinoIcons.cart,
-            color: context.accentColor,
+            color: Colors.white,
           ),
         ),
         body: SafeArea(
