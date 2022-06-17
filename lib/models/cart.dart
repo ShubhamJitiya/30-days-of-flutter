@@ -1,12 +1,6 @@
 import 'package:flutter_application_1/models/catalog.dart';
 
 class CartModel {
-  //Singleton - So that we have only one object
-  static final cartModel = CartModel._internal();
-
-  CartModel._internal();
-
-  factory CartModel() => cartModel;
 
   //Catalog field
   CatalogModel? _catalog;

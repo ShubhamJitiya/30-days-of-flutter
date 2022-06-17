@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/home_widget/add_to_cart.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import 'package:flutter_application_1/models/cart.dart';
 import 'package:flutter_application_1/models/catalog.dart';
 import 'package:flutter_application_1/pages/home_detail_page.dart';
-import 'package:flutter_application_1/widgets/themes.dart';
 
 import 'catalog_image.dart';
 
@@ -74,14 +72,4 @@ class CatalogItem extends StatelessWidget {
   }
 }
 
-class AddToCart extends StatefulWidget {
-  final Item catalog;
-  const AddToCart({
-    Key? key,
-    required this.catalog,
-  }) : super(key: key);
-
-  @override
-  State<AddToCart> createState() => AddToCartState();
-}
 
