@@ -39,7 +39,11 @@ class _CartTotal extends StatelessWidget {
                 backgroundColor:
                     MaterialStateProperty.all(context.theme.buttonColor),
               ),
-              onPressed: () {},
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: "Buying not supported yet".text.make(),
+                ));
+              },
               child: "Buy".text.white.make(),
             ).w32(context)
           ],
@@ -68,6 +72,7 @@ class __CartListState extends State<_CartList> {
                 onPressed: () {},
               ),
               title: "Item 1".text.make(),
-            ));
+            )
+            );
   }
 }
