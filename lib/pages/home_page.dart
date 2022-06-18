@@ -22,7 +22,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final int days = 31;
-  final url = "https://jsonkeeper.com/b/O8EZ";
+  // final url = "https://jsonkeeper.com/b/O8EZ";
   
   @override
   void initState() {
@@ -33,10 +33,10 @@ class _HomePageState extends State<HomePage> {
 
   loadData() async {
     await Future.delayed(Duration(seconds: 2));
-    // final catalogJson =
-    //     await rootBundle.loadString("assets/files/catalog.json");
-    final response = await http.get(Uri.parse(url));
-    final catalogJson = response.body;
+     final catalogJson =
+         await rootBundle.loadString("assets/files/catalog.json");
+    // final response = await http.get(Uri.parse(url));
+    // final catalogJson = response.body;
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
