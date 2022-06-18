@@ -8,5 +8,5 @@ class MyStore extends VxStore {
 
   MyStore() {
     cart.catalog = catalog;
-  } 
+  }
 }

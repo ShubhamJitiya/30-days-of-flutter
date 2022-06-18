@@ -5,10 +5,12 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/core/store.dart';
+import 'package:flutter_application_1/models/cart.dart';
 import 'package:flutter_application_1/models/catalog.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:flutter_application_1/widgets/home_widget/catalog_list.dart';
-
+import 'package:http/http.dart' as http;
 import 'package:velocity_x/velocity_x.dart';
 
 import '../widgets/home_widget/catalog_header.dart';
@@ -42,15 +44,29 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // final _cart = (VxState.store as MyStore).cart;
+    final CartModel _cart = (VxState.store as MyStore).cart;
+
+    print(len);
     return Scaffold(
         backgroundColor: context.canvasColor,
-        floatingActionButton: FloatingActionButton(
-          onPressed: (() => Navigator.pushNamed(context, MyRoutes.cartRoute)),
-          backgroundColor: context.theme.buttonColor,
-          child: Icon(
-            CupertinoIcons.cart,
-            color: Colors.white,
-          ),
+        floatingActionButton: VxBuilder(
+          mutations: {AddMutation, RemoveMutation},
+          builder: (context, _, _cart) => FloatingActionButton(
+            onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+            backgroundColor: context.theme.buttonColor,
+            child: Icon(
+              CupertinoIcons.cart,
+              color: Colors.white,
+            ),
+          ).badge(
+              color: Vx.red500,
+              size: 22,
+              count: len(),
+              textStyle: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              )),
         ),
         body: SafeArea(
             child: Container(
@@ -65,5 +81,10 @@ class _HomePageState extends State<HomePage> {
                       else
                         CircularProgressIndicator().centered().expand(),
                     ]))));
+  }
+
+  int len() {
+    final CartModel _cart = (VxState.store as MyStore).cart;
+    return _cart.items.length;
   }
 }
